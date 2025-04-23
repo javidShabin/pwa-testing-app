@@ -1,0 +1,138 @@
+/* Reset default margin and padding */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Base styles */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f7fb;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* App container styling */
+.container {
+  max-width: 400px;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+}
+
+/* Title */
+h1 {
+  font-size: 2rem;
+  color: #4e73df;
+  margin-bottom: 20px;
+}
+
+/* Input and button styling */
+.input-wrapper {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+input {
+  flex: 1;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+input:focus {
+  border-color: #4e73df;
+}
+
+button {
+  padding: 10px 15px;
+  font-size: 1rem;
+  background-color: #4e73df;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #2e59d9;
+}
+
+/* Todo list styling */
+ul {
+  list-style-type: none;
+  margin-top: 20px;
+}
+
+li {
+  background-color: #fff;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s;
+}
+
+li:hover {
+  background-color: #f1f1f1;
+}
+
+li.completed {
+  text-decoration: line-through;
+  color: #b0b0b0;
+}
+
+/* Delete button */
+button.delete {
+  background-color: #e74c3c;
+  border-radius: 50%;
+  padding: 5px 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button.delete:hover {
+  background-color: #c0392b;
+}
+
+/* Mobile-first responsive styles */
+@media (max-width: 500px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .input-wrapper {
+    flex-direction: column;
+  }
+
+  input,
+  button {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  li {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+}
